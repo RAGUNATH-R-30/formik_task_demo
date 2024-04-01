@@ -14,8 +14,12 @@ export const bookauthorslice = createSlice({
         setauthors:(state,action)=>{
             state.authorslist = action.payload
             return state;
+        },
+        addauthor:(state,action)=>{
+            state.authorslist = [...state.authorslist,action.payload]
+            return state;
         }
     }
 })
 
-export const{setbooks,setauthors} = bookauthorslice.actions;
+export const{setbooks,setauthors,addauthor} = bookauthorslice.actions;
